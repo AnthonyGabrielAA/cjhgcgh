@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ConversorTemperatura {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        char resposta;
+
+        do {
+            System.out.print("Digite a temperatura em Celsius: ");
+            double celsius = scanner.nextDouble();
+
+            double fahrenheit = (9.0 / 5.0) * celsius + 32;
+
+            System.out.println("Equivalente em Fahrenheit: " + fahrenheit);
+
+            System.out.print("Deseja repetir (s/n)? ");
+            resposta = scanner.next().charAt(0);
+        } while (resposta == 's' || resposta == 'S');
+
+        scanner.close();
+    }
+}
